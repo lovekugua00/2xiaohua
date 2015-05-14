@@ -65,18 +65,21 @@ header, hgroup, footer, section, article, aside {
 
 
 body {
-  padding-top: 2em;
+  padding-top: 2em; 
 }
-#wrapper {
-  margin: 0 auto 2em;
+#wrapper,.container {
+  margin: 0 auto;
   max-width: 1000px;
+}
+#wrapper{
+  margin: 2em auto;
 }
 #header hgroup {
   margin: 0 3%;
   padding: 2.5em 0;
 }
 #navigation div {
-  margin: 0 3%;
+  /*margin: 0 3%;*/
 }
 
 #primary {
@@ -85,7 +88,7 @@ body {
   width: 100%;
 }
 #content {
-  margin: 0 33% 0 3%;
+  /*margin: 0 33% 0 3%;*/
   width: 64%;
 }
 #sidebar {
@@ -154,16 +157,14 @@ body {
 
 body, input, textarea {
   color: #373737;
-  font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 12px/1.625 "PingHei","Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, "Hiragino Sans GB", STHeiti, "WenQuanYi Micro Hei", sans-serif;
   font-weight: 300;
-  line-height: 1.625;
 }
 body {
-  background: #ccc;
+  background: #F1F1F1;
 }
 
-#wrapper {
-  background: #eee;
+#wrapper,.container {
   -moz-border-radius: 5px;
     border-radius: 5px;
 }
@@ -400,22 +401,22 @@ td{
 -------------------------------------------------------------- */
 
 #header #navigation {
-  background: #222; /* Show a solid color for older browsers */
-  background: -moz-linear-gradient(#585858, #3d3d3d);
+  background: #272a2b; /* Show a solid color for older browsers */
+/*  background: -moz-linear-gradient(#585858, #3d3d3d);
   background: -o-linear-gradient(#585858, #3d3d3d);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#585858), to(#3d3d3d)); /* older webkit syntax */
-  background: -webkit-linear-gradient(#585858, #3d3d3d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#585858), to(#3d3d3d)); 
+  background: -webkit-linear-gradient(#585858, #3d3d3d);*/
   clear: both;
   display: block;
   float: left;
-  margin: 0 auto 2px;
+  margin: 0 auto;
   width: 100%;
 }
 #main-menu > ul.menu{
   font-size: 14px;
   list-style: none;
-  margin: 0 0 0 -0.8125em;
   padding-left: 0;
+  margin: 0;
 }
 #main-menu > ul.menu li {
   border-right: 1px solid #444;
@@ -427,7 +428,11 @@ td{
   color: #eee;
   line-height: 3em;
   padding: 0 1.2125em;
+  font-size: 1.142em;
+  font-weight: bold;
   text-decoration: none;
+  transition: background 0.5s cubic-bezier(0.17, 0.67, 0.44, 1.1) 0s;
+  -webkit-transition: background 0.5s cubic-bezier(0.17, 0.67, 0.44, 1.1) 0s;
 }
 #main-menu > ul.menu a {
   display: block;
@@ -472,18 +477,18 @@ td{
 }
 #main-menu > ul.menu li:hover > a,
 #main-menu > ul.menu a:focus{
-  background: #f9f9f9; /* Show a solid color for older browsers */
-  background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+  background: #d9df1e; /* Show a solid color for older browsers */
+/*  background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
   background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-  background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
-  color: #373737;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); 
+  background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);*/
+  color: #222;
 }
 #main-menu > ul.menu li:hover > ul {
   display: block;
 }
 #main-menu > ul.menu a.active {
-  font-weight: bold;
+  color: #d9df1e;
 }
 
 #main-menu ul li.leaf, #main-menu ul li.expanded { list-style: none; }
@@ -571,18 +576,11 @@ td{
 }
 
 #main {
-  background-color: #eee;
   clear: both;
-  padding: 2em 0 0;
 }
 
 #content-wrap {
-  background-color: white;
-  border-bottom: 2px solid #CCC;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   margin: 0 0 2em;
-  padding: 0.5em 5% 2em;
   position: relative;
   width: auto;
 }
@@ -602,9 +600,12 @@ td{
 }
 
 #main #content .node-teaser {
-  padding-bottom:30px;
-  border-bottom:1px solid #DDDDDD;
+  background: #FFF;
+  padding: 2em 5% 2em;
+  border:1px solid #DDDDDD;
   margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .node-teaser img {
@@ -613,7 +614,6 @@ td{
   height: auto;
   max-width: 97.4%;
   margin: 0.5em 1em 0.5em 0;
-  float: left;
 }
 .page-node #content-wrap img {
   border: 1px solid #CCCCCC;
@@ -687,9 +687,8 @@ td{
 }
 
 #preface-area {
-    background-color: #eee;
     overflow: hidden;
-    padding: 2em 3% 0;
+    /*padding: 2em 3% 0;*/
 }
 
 #preface-block-wrap.in1 .preface-block {
@@ -1458,7 +1457,7 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
 ----------------------------------------------- */
 /* Smaller than standard 1060 (devices and browsers) */
 @media screen and (max-width: 1060px) {
-  #wrapper {
+  #wrapper,.container {
     max-width: 900px;
   }
   #nav-slider .nav-previous, 
@@ -1469,7 +1468,7 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
 
 @media screen and (max-width: 960px) {
   /*  ipad */
-  #wrapper {
+  #wrapper,.container {
     max-width: 708px;
   }
   /* Simplify the basic layout */
@@ -1523,7 +1522,7 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
   
 @media screen and (max-width: 767px) {
   /*  small tablet */
-  #wrapper {
+  #wrapper,.container {
     max-width: 480px;
   }
   /* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
@@ -1643,7 +1642,7 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
 }
 @media screen and (max-width: 479px) {
   /*  iphone */
-  #wrapper {
+  #wrapper,.container {
     max-width: 320px;
   }
   #site-name {
@@ -1666,10 +1665,10 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
 }
 @media screen and (max-width: 319px) {
   /* small phone */
-  #wrapper {
+  #wrapper,.container {
     max-width: 100%;
   }
-  #wrapper {
+  #wrapper,.container {
     margin-top: 0;
   }
   #header {
@@ -1693,7 +1692,7 @@ border-left: 1px solid; border-right: 1px solid; height: 40px; margin-left: -36p
     background: none !important;
     font-size: 10pt;
   }
-  #wrapper {
+  #wrapper,.container {
     clear: both !important;
     display: block !important;
     float: none !important;
